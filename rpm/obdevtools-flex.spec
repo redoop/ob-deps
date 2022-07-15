@@ -30,7 +30,7 @@ cd %{_src}
 # if you failed to build flex in an arm machine, please use following command instead.
 # ./configure --build=unknown-unknown-linux --prefix=${RPM_BUILD_ROOT}/%{_prefix}
 
-./configure --prefix=${RPM_BUILD_ROOT}/%{_prefix}
+./configure --prefix=${RPM_BUILD_ROOT}/%{_prefix} --build=loongarch64-kylin-linux-gnu
 CPU_CORES=`grep -c ^processor /proc/cpuinfo`
 make -j${CPU_CORES};
 

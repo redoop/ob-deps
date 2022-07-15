@@ -35,7 +35,8 @@ tar -xf %{_src}.tar.gz
 cd %{_src}
 ./configure --prefix=%{_tmppath} --without-libssh2 --without-nss --disable-ftp --disable-ldap --disable-ldaps --without-cyassl \
             --without-polarssl --without-winssl --without-gnutls --with-ssl --without-darwinssl --disable-cookies --disable-rtsp  \
-            --disable-pop3 --disable-smtp --disable-imap --disable-telnet --disable-tftp --disable-verbose --disable-gopher --enable-shared=no --with-pic=yes
+            --disable-pop3 --disable-smtp --disable-imap --disable-telnet --disable-tftp --disable-verbose --disable-gopher --enable-shared=no --with-pic=yes \
+            --build=loongarch64-kylin-linux-gnu
 CPU_CORES=`grep -c ^processor /proc/cpuinfo`
 make -j${CPU_CORES};
 make install

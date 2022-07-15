@@ -27,7 +27,7 @@ cd $OLDPWD/../
 rm -rf %{_sqlite_src}
 tar xf %{_sqlite_src}.tar.gz
 cd %{_sqlite_src}
-./configure --prefix=%{_tmppath} --enable-shared=no
+./configure --prefix=%{_tmppath} --enable-shared=no --build=loongarch64-kylin-linux-gnu
 CPU_CORES=`grep -c ^processor /proc/cpuinfo`
 make -j${CPU_CORES}
 make install

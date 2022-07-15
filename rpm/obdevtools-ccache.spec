@@ -28,7 +28,7 @@ cd $OLDPWD/../;
 rm -rf %{_src}
 tar -xf %{_src}.tar.gz
 cd %{_src}
-./configure --prefix=${RPM_BUILD_ROOT}/%{_prefix} --disable-man
+./configure --prefix=${RPM_BUILD_ROOT}/%{_prefix} --disable-man --build=loongarch64-kylin-linux-gnu
 CPU_CORES=`grep -c ^processor /proc/cpuinfo`
 make -j${CPU_CORES};
 

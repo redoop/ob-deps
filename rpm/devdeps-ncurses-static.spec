@@ -27,7 +27,7 @@ tar -xf %{_src}.tar.gz
 cd %{_src}
 export CFLAGS="-fPIC"
 export CXXFLAGS="-fPIC"
-./configure --with-normal --enable-overwrite
+./configure --with-normal --enable-overwrite --build=loongarch64-kylin-linux-gnu
 make install DESTDIR=%{_tmppath}
 
 %install
